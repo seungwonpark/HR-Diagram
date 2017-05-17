@@ -1,3 +1,4 @@
+import os
 from crawler import crawl_url
 
 def grid_search(ra_0, ra_1, dec_0, dec_1, interval):
@@ -8,6 +9,10 @@ def grid_search(ra_0, ra_1, dec_0, dec_1, interval):
 	dec_length = int((dec_1 - dec_0) // interval)
 
 	datafilename = 'data/%g-%g-%g-%g-%g.csv' % (ra_0, ra_1, dec_0, dec_1, interval)
+
+	if(os.path.isfile(datafilename)):
+		print('File already exists.')
+		return datafilename
 
 	f = open(datafilename, 'w')
 	f.write('ObjectNo, ra, dec, type, u, g, r, i, z\n')
