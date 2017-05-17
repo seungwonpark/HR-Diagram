@@ -7,7 +7,7 @@ dec_1 = 21.526
 
 #interval = 0.001
 interval = 0.02
-
+threshold = 18 # if object is darker than threshold, then skip.
 
 ra_0, ra_1 = sorted([ra_0, ra_1])
 dec_0, dec_1 = sorted([dec_0, dec_1])
@@ -20,6 +20,8 @@ filename = 'result/%g-%g-%g-%g-%g.csv' % (ra_0, ra_1, dec_0, dec_1, interval)
 f = open(filename, 'w')
 f.write('ObjectNo, ra, dec, type, u, g, r, i, z\n')
 
+ObjectList = []
+
 for ra_i in range(ra_length):
 	for dec_i in range(dec_length):
 		ra = ra_0 + interval * ra_i
@@ -30,4 +32,7 @@ for ra_i in range(ra_length):
 		if(data == 0):
 			continue
 		else:
-			f.write(", ".join(data) + "\n")
+			if(float(data[-3]) < threshold and data[3] == 'STAR'):
+				if(data[0] not in ObjectList): # to avoid duplication
+					ObjectList.append(data[0])
+					f.write(", ".join(data) + "\n")
