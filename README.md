@@ -1,7 +1,9 @@
 # HR-Diagram
 
-Software for drawing H-R diagram automatically.
-Uses data from [SDSS DR7 Navigate Tool](http://skyserver.sdss.org/dr7/sp/tools/chart/navi.asp).
+- Software for drawing H-R diagram.
+- Uses data from [SDSS DR7 Navigate Tool](http://skyserver.sdss.org/dr7/sp/tools/chart/navi.asp).
+- Uses 'g'(green), 'r'(red) filter.
+- Based on Python3.
 
 
 ## Instructions
@@ -15,3 +17,9 @@ interval = 0.02
 
 clustername = 'NGC2420'
 ```
+- Run `main.py`.
+> python main.py
+
+## Example
+
+<img src='./img/NGC2420_114.543-114.665-21.526-21.641-0.005.png'>
