@@ -7,10 +7,10 @@ plt.xlabel('r')
 plt.ylabel('g - r')
 plt.annotate('Plot by Seungwon Park, Data by SDSS', xy=(0.02, 0.04), xycoords='axes fraction')
 
-def plot_HR(filename, clustername):
+def plot_HR(datafilename, clustername):
 
 	plt.title('H-R diagram of %s' % clustername)
-	with open(filename, 'r') as f:
+	with open(datafilename, 'r') as f:
 		next(f) # skip first line
 		for line in f.readlines():
 			data = str(line)[:-1].split(', ')
@@ -21,4 +21,6 @@ def plot_HR(filename, clustername):
 		R = np.array(r)
 
 		plt.plot(G_R, R, 'ko')
-		plt.savefig(filename[:-4] + '.pdf', format='pdf')
+		plotfilename = 'diagrams/%s_%s.pdf' % (clustername, datafilename[:-4].split('/')[1])
+		plt.savefig(plotfilename, format='pdf')
+	return plotfilename

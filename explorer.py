@@ -1,6 +1,6 @@
 from crawler import crawl_url
 
-threshold = 18 # if object's "r" is darker than threshold, then skip.
+threshold = 99 # if object's "r" is darker than threshold, then skip.
 
 def grid_search(ra_0, ra_1, dec_0, dec_1, interval):
 	ra_0, ra_1 = sorted([ra_0, ra_1])
@@ -9,9 +9,9 @@ def grid_search(ra_0, ra_1, dec_0, dec_1, interval):
 	ra_length = int((ra_1 - ra_0) // interval)
 	dec_length = int((dec_1 - dec_0) // interval)
 
-	filename = 'result/%g-%g-%g-%g-%g.csv' % (ra_0, ra_1, dec_0, dec_1, interval)
+	datafilename = 'data/%g-%g-%g-%g-%g-%g.csv' % (ra_0, ra_1, dec_0, dec_1, interval, threshold)
 
-	f = open(filename, 'w')
+	f = open(datafilename, 'w')
 	f.write('ObjectNo, ra, dec, type, u, g, r, i, z\n')
 
 	ObjectList = []
@@ -37,4 +37,4 @@ def grid_search(ra_0, ra_1, dec_0, dec_1, interval):
 
 	print('Done!')
 
-	return filename
+	return datafilename
