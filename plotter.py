@@ -21,7 +21,7 @@ def plot_HR(datafilename, clustername, threshold):
 		G_R = np.array(g_r)
 		R = np.array(r)
 
-		plt.plot(G_R, R, 'ko')
+		plt.plot(G_R, R, 'ko', markersize=1.5)
 		plotfilename = 'diagrams/%s_%g_%s.pdf' % (clustername, threshold, datafilename[:-4].split('/')[1])
 		plt.savefig(plotfilename, format='pdf')
 	return plotfilename

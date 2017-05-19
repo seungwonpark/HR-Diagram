@@ -14,8 +14,14 @@
 
 ## Example
 
-<img src='./img/NGC2420_114.543-114.665-21.526-21.641-0.005.png'>
+<img src='./img/NGC2420_99_114.543-114.665-21.526-21.641-0.002'>
 
+
+## File name format
+```
+datafilename = 'data/%g-%g-%g-%g-%g.csv' % (ra_0, ra_1, dec_0, dec_1, interval)
+plotfilename = 'diagrams/%s_%g_%s.pdf' % (clustername, threshold, datafilename[:-4].split('/')[1])
+```
 
 ## TODOs
 
