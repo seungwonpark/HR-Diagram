@@ -7,18 +7,8 @@
 
 
 ## Instructions
-- Type the name and area of cluster at `main.py`.
-- Type the threshold to exclude background stars.
+- Fill out the form at `ClusterInfo.ini`.
   - If you change only the threshold, then it will skip crawling data and plot directly.
-```
-ra_0 = 114.543
-dec_0 = 21.641
-ra_1 = 114.665
-dec_1 = 21.526
-interval = 0.02
-clustername = 'NGC2420'
-threshold = 18
-```
 - Run `main.py`.
 > python main.py
 
