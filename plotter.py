@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 
 g_r = []
 r = []
-plt.xlabel('r')
-plt.ylabel('g - r')
+plt.xlabel('g - r')
+plt.ylabel('r')
 plt.annotate('Plot by Seungwon Park, Data by SDSS', xy=(0.02, 0.04), xycoords='axes fraction')
 
 def plot_HR(datafilename, clustername, threshold):
