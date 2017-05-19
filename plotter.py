@@ -5,6 +5,7 @@ g_r = []
 r = []
 plt.xlabel('g - r')
 plt.ylabel('r')
+plt.gca().invert_yaxis()
 plt.annotate('Plot by Seungwon Park, Data by SDSS', xy=(0.02, 0.04), xycoords='axes fraction')
 
 def plot_HR(datafilename, clustername, threshold):
