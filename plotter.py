@@ -6,11 +6,11 @@ r = []
 plt.xlabel('g - r')
 plt.ylabel('r')
 plt.gca().invert_yaxis()
-plt.annotate('Plot by Seungwon Park, Data by SDSS', xy=(0.02, 0.04), xycoords='axes fraction')
+plt.annotate('Plot by Seungwon Park, Data by SDSS', xy=(0.02, 0.04), xycoords='axes fraction', color='gray')
 
 def plot_HR(datafilename, clustername, threshold):
 
-	plt.title('H-R diagram of %s' % clustername)
+	plt.title('H-R diagram(CMD) of %s' % clustername)
 	with open(datafilename, 'r') as f:
 		next(f) # skip first line
 		for line in f.readlines():

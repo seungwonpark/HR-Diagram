@@ -3,6 +3,7 @@
 - Software for drawing H-R diagram.
 - Crawls data from [SDSS DR7 Navigate Tool](http://skyserver.sdss.org/dr7/sp/tools/chart/navi.asp).
 - Uses 'g'(green), 'r'(red) filter.
+	- Strictly speaking, it's called as 'Color-Magnitude Diagram(CMD)'.
 - Based on Python3.
 
 
@@ -12,10 +13,10 @@
 - Run `main.py`.
 > python main.py
 
-## Example
+## Examples
 
 <img src='./img/NGC2420_99_114.543-114.665-21.526-21.641-0.002.png'>
-
+<img src='.img/M67_99_132.732-133.009-11.7161-11.9978-0.002.png'>
 
 ## File name format
 ```
