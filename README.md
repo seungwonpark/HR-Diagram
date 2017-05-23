@@ -1,4 +1,5 @@
 # HR-Diagram
+[![DOI](https://zenodo.org/badge/91554541.svg)](https://zenodo.org/badge/latestdoi/91554541)
 
 - Software for drawing H-R diagram.
 - Crawls data from [SDSS DR7 Navigate Tool](http://skyserver.sdss.org/dr7/sp/tools/chart/navi.asp).
